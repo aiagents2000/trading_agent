@@ -23,8 +23,8 @@ deterministico** e un **paper broker** tengono tutto sotto controllo. Serve a du
 ## Quickstart
 
 ```bash
-uv venv && source .venv/bin/activate
-uv pip install -e ".[dev]"
+uv sync                      # crea .venv con dipendenze + gruppo dev
+source .venv/bin/activate
 pytest
 
 # Ciclo completo senza API key né rete (dati sintetici, agenti deterministici)

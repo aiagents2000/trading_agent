@@ -30,8 +30,8 @@ Consigliato: in GitHub → Settings → Branches, proteggere `main` con "Require
 ## Setup locale
 
 ```bash
-uv venv && source .venv/bin/activate
-uv pip install -e ".[dev]"
+uv sync                      # crea .venv con dipendenze + gruppo dev
+source .venv/bin/activate
 pre-commit install
 pytest && trading-agent cycle --dry-run --offline
 ```

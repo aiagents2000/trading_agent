@@ -1,0 +1,15 @@
+# Limiti HARD applicati dal Risk Engine deterministico (src/trading_agent/risk/engine.py).
+# Nessun agente LLM può superarli: possono solo proporre size più piccole.
+# Ogni modifica a questo file va fatta via PR con review dell'altro collaboratore.
+
+max_position_pct_equity: 0.10    # max 10% dell'equity su un singolo simbolo
+max_gross_exposure_pct: 0.50     # max 50% dell'equity investita in totale
+max_risk_per_trade_pct: 0.01     # perdita max allo stop = 1% dell'equity
+max_daily_trades: 5
+max_drawdown_kill_switch: 0.15   # oltre -15% dal picco: stop a tutte le nuove entrate
+require_stop_loss: true
+allow_short: false               # spot only nella fase 1
+symbol_whitelist:
+  - BTC/USDT
+  - ETH/USDT
+  - SOL/USDT

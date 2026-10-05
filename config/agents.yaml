@@ -1,0 +1,53 @@
+# Ruolo -> modello + prompt. Due tier come in TradingAgents:
+#  - quick tier (claude-sonnet-5-5): analisti, debattiti, comitato rischio
+#  - deep tier  (claude-opus-5-5):   research manager, trader, portfolio manager, reflection
+# NB: claude-haiku-4-5 non è usato: il ritiro è previsto non prima del 15/10/2026.
+
+debate_rounds: 2
+risk_debate_rounds: 1
+
+agents:
+  technical_analyst:
+    model: claude-sonnet-5-5
+    effort: low
+    prompt: prompts/technical_analyst.md
+  sentiment_analyst:
+    model: claude-sonnet-5-5
+    effort: low
+    prompt: prompts/sentiment_analyst.md
+  fundamental_analyst:
+    model: claude-sonnet-5-5
+    effort: low
+    prompt: prompts/fundamental_analyst.md
+  macro_analyst:
+    model: claude-sonnet-5-5
+    effort: low
+    prompt: prompts/macro_analyst.md
+  bull_researcher:
+    model: claude-sonnet-5-5
+    effort: medium
+    prompt: prompts/bull_researcher.md
+  bear_researcher:
+    model: claude-sonnet-5-5
+    effort: medium
+    prompt: prompts/bear_researcher.md
+  research_manager:
+    model: claude-opus-5-5
+    effort: medium
+    prompt: prompts/research_manager.md
+  trader:
+    model: claude-opus-5-5
+    effort: medium
+    prompt: prompts/trader.md
+  risk_committee:
+    model: claude-sonnet-5-5
+    effort: medium
+    prompt: prompts/risk_committee.md
+  portfolio_manager:
+    model: claude-opus-5-5
+    effort: high
+    prompt: prompts/portfolio_manager.md
+  reflection:
+    model: claude-opus-5-5
+    effort: medium
+    prompt: prompts/reflection.md

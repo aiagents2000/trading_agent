@@ -1,0 +1,9 @@
+# Parametri del ciclo di trading (paper). Simboli in formato ccxt.
+symbols:
+  - BTC/USDT
+  - ETH/USDT
+timeframe: 4h
+lookback_bars: 300
+initial_equity: 10000
+fee_rate: 0.001       # 0.1% per lato
+slippage_bps: 5
